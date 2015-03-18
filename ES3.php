@@ -313,6 +313,11 @@ use \Aws\Common\Exception\MultipartUploadException;
 			));
 	}
 	
+	public function doesObjectExist($bucket, $key = '', $options = array()) {
+		$s3 = $this->getInstance();
+		return $s3->doesObjectExist($bucket, $key, $options);
+	}
+	
 	   /**
 	 * @return boolean 
 	 * @param string $key The key/name of the object in the bucket
